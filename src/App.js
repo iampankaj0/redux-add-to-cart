@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
@@ -17,6 +18,7 @@ const App = () => {
             <Route exact path='/' component={Home} />
             <Route path='/cart' component={Cart} />
           </Switch>
+          <Redirect to='/' />
         </Router>
       </Provider>
 
